@@ -15,13 +15,6 @@ stages:
       - echo 'APT::Install-Recommends "1";' > /etc/apt/apt.conf.d/01norecommends
 
   modules:
-  - name: init-setup
-    type: shell
-    commands:
-    - apt-get update
-
-  # Put your custom actions below this comment
-
   - name: vanilla-tools
     type: shell
     source:
@@ -34,6 +27,14 @@ stages:
     - cp /sources/vanilla-tools/vanilla-tools/cur-gpu /usr/bin/cur-gpu
     - chmod +x /usr/bin/lpkg
     - chmod +x /usr/bin/cur-gpu
+    
+  - name: init-setup
+    type: shell
+    commands:
+    - lpkg --unlock
+    - apt-get update
+
+  # Put your custom actions below this comment
 
   - name: example-modules # Sample module demonstrating importing local and remote modules
     type: includes
