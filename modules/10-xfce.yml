@@ -1,4 +1,4 @@
 name: xfce-core
 type: shell
 commands:
-- apt install lightdm plymouth xfce4 xfce4-goodies
+- apt install -y lightdm plymouth xfce4 xfce4-goodies
