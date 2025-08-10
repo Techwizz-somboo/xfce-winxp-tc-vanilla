@@ -1,9 +1,4 @@
 name: xfce-core
-type: apt
-sources:
-  - packages:
-    - lightdm
-    - plymouth
-
-    - xfce4
-    - xfce4-goodies
+type: shell
+commands:
+- apt install lightdm plymouth xfce4 xfce4-goodies
