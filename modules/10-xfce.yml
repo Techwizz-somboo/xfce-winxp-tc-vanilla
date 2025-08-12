@@ -1,4 +1,4 @@
 name: xfce-core
 type: shell
 commands:
-- apt install -y lightdm xfce4 xfce4-goodies
+- apt install -y lightdm xfce4 xfce4-goodies libgarcon-1-dev libwnck-3-dev xcape

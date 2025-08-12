@@ -2,7 +2,7 @@ name: sysconfig
 type: shell
 commands:
 # Windows XP login theme
-- sed -i '/^greeter-session=/c\greeter-session=wintc-logonui' /etc/lightdm/lightdm.conf
+- sed -i '/greeter-session/c\greeter-session=wintc-logonui' /etc/lightdm/lightdm.conf
 # Windows XP bootup theme
 - sed -i 's/^GRUB_CMDLINE_LINUX_DEFAULT=.*/GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"/' /etc/default/grub
 - plymouth-set-default-theme -R bootvid
